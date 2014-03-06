@@ -76,13 +76,13 @@ This sets any common, generic styles and variables and imports…
 
 #### `_bootstrap_custom.scss`
 
-This is a copy of [`bootstrap.scss`](https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/bootstrap.scss) with the `@import` paths tweaked and any parts of Bootstrap we don't need commented out. SASS then only includes the parts we need in the generated CSS file(s), keeping it smaller. This file also imports…
+This is a copy of the official [`bootstrap.scss`](https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/bootstrap.scss) with the `@import` paths tweaked and any parts of Bootstrap we don't need commented out. SASS then only includes the parts we need in the generated CSS file(s), keeping it smaller. This file also imports…
 
 #### `_bootstrap_variables.scss`
 
-The [`_variables.scss`](https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss) file contains all the default Bootstrap values. In our local version we set any values that we want to change.
+The official [`_variables.scss`](https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss) file contains all the default Bootstrap values. In our local version we set any values that we want to change.
 
-For example, the original `_variables.scss` has `$body-bg: #fff !default;`. If we want a different background color, we'd put `$body-bg: #eee;` in our local `_bootstrap_variables.scss`.
+For example, the original `_variables.scss` has `$body-bg: #fff !default;`. If we want a different background color, we'd put something like `$body-bg: #eee;` in our local `_bootstrap_variables.scss`.
 
 .
 
@@ -98,7 +98,7 @@ This applies all of `.form-control`'s styles to that `textarea`.
 
 ### Bootstrap's JavaScript
 
-If you need any of Bootstrap's JavaScript you'll either need to use the [customizer](http://getbootstrap.com/customize/) to download what you need, or just use the complete JavaScript file. Either way, it goes in `public/js/`. Don't forget to enable the bits of Bootstrap CSS (in `_bootstrap_custom.scss`) each JS component requires.
+If you need any of Bootstrap's JavaScript you'll either need to use the [customizer](http://getbootstrap.com/customize/) to download what you need, or (as in this example) just use the complete JavaScript file. Either way, it goes in `public/js/`. Don't forget to enable the bits of Bootstrap CSS (in `_bootstrap_custom.scss`) each JS component requires.
 
 ## Compass
 
