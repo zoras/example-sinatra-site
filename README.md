@@ -35,11 +35,11 @@ Some notes on the structure and how it works:
 
     * There's a catch-all route for URLs that do nothing but render a view. Add new paths and page details to the hash, and then add matching views, to get them working. For example, if you want `/projects/demo/` to work as a URL, add this to the `pages` hash:
 
-            'projects/demo' =&gt; {
-          :page_name =&gt; 'projects_demo',
-          :title =&gt; 'Demo project',
-          :layout =&gt; 'with_sidebar',
-        },
+            'projects/demo' => {
+              :page_name => 'projects_demo',
+              :title => 'Demo project',
+              :layout => 'with_sidebar',
+            },
 
 And create a new view at `views/projects_demo.erb` containing the main content for that page.
 
