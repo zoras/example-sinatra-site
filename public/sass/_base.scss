@@ -31,3 +31,10 @@ pre code {
   background: $background-shade-light;
 }
 
+.active>a {
+  color: $text-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+

@@ -1,23 +1,22 @@
 <%= erb :header, :views => settings.partials_dir %>
 
-<div class="container container-padded">
+<div class="container">
   <div class="row">
 
-    <div class="col-md-9">
+    <div class="col-sm-9">
       <h1><%= @page_title %></h1>
 
 <%= yield %>
 
     </div> <!-- .col -->
 
-    <div class="col-md-3 sidebar">
-      <span class="glyphicon glyphicon-search"></span>
+    <div class="col-sm-3 sidebar">
       <p>Some sidebar content goes here.</p>
       <p>It could vary for some pages depending on <code>@page_name</code>.</p>
 
       <ul>
-        <li><a href="<%= url('/help/') %>">Help</a></li>
-        <li><a href="<%= url('/help/accounts/') %>">Accounts help</a></li>
+        <li<% if @page_name == 'help' %> class="active"<% end %>><a href="<%= url('/help/') %>">Introduction</a></li>
+        <li<% if @page_name == 'help_accounts' %> class="active"<% end %>><a href="<%= url('/help/accounts/') %>">Accounts help</a></li>
       </ul>
     </div>
 

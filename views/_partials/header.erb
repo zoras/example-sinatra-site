@@ -18,3 +18,30 @@
 </head>
 <body>
 
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="<%= url('/') %>" title="To the front page"><span>Site title</span></a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="<% if @page_name == 'home' %>active active-unlink<% end %>"><a href="<%= url('/') %>">Home</a></li>
+      <li class="dropdown <% if @page_name =~ /^help/ %>active<% if @page_name == 'help' %> active-unlink<% end %><% end %>">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="<%= url('/help/') %>">Introduction</a></li>
+          <li><a href="<%= url('/help/accounts/') %>">Accounts</a></li>
+        </ul>
+      </li>
+      <li class="<% if @page_name == 'special' %>active active-unlink<% end %>"><a href="<%= url('/special/') %>">Special</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
